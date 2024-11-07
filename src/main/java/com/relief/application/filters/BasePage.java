@@ -1,4 +1,4 @@
-package com.relief.application.dtos;
+package com.relief.application.filters;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import org.springframework.data.domain.Page;
 import java.util.List;
 
 @Data
-public class BasePage {
+public class BasePage<T> {
     private List<T> data;
     private Pageable pageable;
 

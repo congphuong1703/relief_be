@@ -1,2 +1,4 @@
-package com.relief.application.requests;public interface BaseRequest {
+package com.relief.application.requests;
+
+public interface BaseRequest<O> {
 }

@@ -4,7 +4,11 @@ import com.relief.domain.models.IncrementCode;
 import com.relief.domain.services.interfaces.IncrementCodeService;
 import com.relief.infrastructure.repositories.IncrementCodeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+@Service
+@Transactional(rollbackFor = Exception.class)
 public class IncrementCodeServiceImpl implements IncrementCodeService {
     @Autowired
     private IncrementCodeRepository incrementCodeRepository;
@@ -23,7 +27,7 @@ public class IncrementCodeServiceImpl implements IncrementCodeService {
             incrementCode.setIncrement(incrementCode.getIncrement() + 1);
         }
 
-        this.incrementCodeRepository.create(incrementCode);
+        this.incrementCodeRepository.save(incrementCode);
 
         return incrementCode.getIncrement() > 0 ?
                 incrementCode.getCode() + incrementCode.getIncrement() : incrementCode.getCode();
@@ -31,6 +35,6 @@ public class IncrementCodeServiceImpl implements IncrementCodeService {
 
     @Override
     public IncrementCode getByCode(String code) {
-        return this.incrementCodeRepository.findOneByField("code", code);
+        return this.incrementCodeRepository.getByCode(code);
     }
 }

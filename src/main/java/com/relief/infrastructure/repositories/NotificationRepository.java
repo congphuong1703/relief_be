@@ -1,4 +1,4 @@
-package com.relief.infrastructure.repositories.interfaces;
+package com.relief.infrastructure.repositories;
 
 import com.relief.domain.models.Notification;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,4 +1,4 @@
-package com.relief.domain.models;
+package com.relief.domain.models.newsFeed;
 
 import com.relief.domain.enums.DetachType;
 import jakarta.persistence.*;
@@ -26,6 +26,10 @@ public class PostDetach implements Serializable {
     @ManyToOne
     @JoinColumn(name = "post_id", referencedColumnName = "id")
     private Post post;
+
+    @ManyToOne
+    @JoinColumn(name = "commnet_id", referencedColumnName = "id")
+    private Comment comment;
 
     @Column
     private String path;

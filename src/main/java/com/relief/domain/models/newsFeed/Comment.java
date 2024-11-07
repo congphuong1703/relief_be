@@ -1,6 +1,8 @@
-package com.relief.domain.models;
+package com.relief.domain.models.newsFeed;
 
 import com.relief.domain.enums.YesNo;
+import com.relief.domain.models.BaseModel;
+import com.relief.domain.models.Users;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,10 +10,12 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.SQLRestriction;
+import org.hibernate.annotations.UuidGenerator;
 
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
+import java.util.UUID;
 
 @EqualsAndHashCode(callSuper = true)
 @Entity
@@ -26,9 +30,9 @@ public class Comment extends BaseModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private Long id;
+    @UuidGenerator
+    private UUID id;
 
     @Column
     private String message;

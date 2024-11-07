@@ -1,2 +1,6 @@
-package com.relief.domain.enums;public class PostAudience {
+package com.relief.domain.enums;
+
+public enum PostAudience {
+    PUBLIC, PRIVATE, FOLLOWER, SPECIAL
+
 }

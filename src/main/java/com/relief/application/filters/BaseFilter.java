@@ -1,2 +1,4 @@
-package com.relief.application.filters;public class BaseFilter {
+package com.relief.application.filters;
+
+public interface BaseFilter<O> {
 }

@@ -1,4 +1,4 @@
-package com.relief.application.controllers.interfaces;
+package com.relief.application.controllers;
 
 import com.relief.application.dtos.NotificationDTO;
 import com.relief.application.filters.BasePage;

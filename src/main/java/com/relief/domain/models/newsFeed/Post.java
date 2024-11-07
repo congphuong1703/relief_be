@@ -1,15 +1,19 @@
-package com.relief.domain.models;
+package com.relief.domain.models.newsFeed;
 
+import com.relief.domain.models.BaseModel;
+import com.relief.domain.models.Users;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.SQLRestriction;
+import org.hibernate.annotations.UuidGenerator;
 
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.Set;
+import java.util.UUID;
 
 @EqualsAndHashCode(callSuper = true)
 @Entity
@@ -23,9 +27,9 @@ public class Post extends BaseModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     @Column
-    private String Id;
+    @UuidGenerator
+    private UUID Id;
 
     @Column
     private String caption;

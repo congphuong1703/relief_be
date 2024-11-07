@@ -1,9 +1,12 @@
-package com.relief.domain.designPatterns;
+package com.relief.domain.designPatterns.interfaces;
 
-import java.util.UUID;
+import com.relief.domain.models.Users;
 
-public interface LikeStrategy {
+public interface LikeStrategy{
 
-    void like(UUID userId, UUID objectId);
-    int countLikes(UUID userId, UUID objectId);
+    void like(Users users, Object object);
+
+    void unlike(Users users, Object object);
+
+    int countLikes(Object object);
 }

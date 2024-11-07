@@ -1,2 +1,5 @@
-package com.relief.domain.enums;public class NotificationStatus {
+package com.relief.domain.enums;
+
+public enum NotificationStatus {
+    PENDING, SENT, READ, FAILED
 }

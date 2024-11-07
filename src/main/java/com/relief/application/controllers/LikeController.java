@@ -1,2 +1,4 @@
-package com.relief.application.controllers;public class LikeController {
+package com.relief.application.controllers;
+
+public class LikeController {
 }

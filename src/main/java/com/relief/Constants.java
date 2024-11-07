@@ -1,2 +1,5 @@
-package com.relief;public class Constants {
+package com.relief;
+
+public class Constants {
+
 }

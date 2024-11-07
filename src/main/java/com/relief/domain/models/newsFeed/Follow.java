@@ -1,5 +1,6 @@
-package com.relief.domain.models;
+package com.relief.domain.models.newsFeed;
 
+import com.relief.domain.models.Users;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

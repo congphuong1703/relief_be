@@ -1,6 +1,6 @@
 package com.relief.application.requests;
 
-import com.relief.domain.enums.YesNo;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class LikeRequest {
+public class LikePostRequest {
 
+    @NotNull
     private String postId;
-    private String commentId;
-    private YesNo isLiked;
+
 }

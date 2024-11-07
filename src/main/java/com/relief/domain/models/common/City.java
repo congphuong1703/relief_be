@@ -1,4 +1,4 @@
-package com.relief.domain.models;
+package com.relief.domain.models.common;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

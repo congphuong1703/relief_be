@@ -1,7 +1,9 @@
-package com.relief.domain.models;
+package com.relief.domain.models.newsFeed;
 
+import com.relief.domain.models.Users;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,6 +15,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Like implements Serializable {
     private static final long serialVersionUID = 1L;
 
